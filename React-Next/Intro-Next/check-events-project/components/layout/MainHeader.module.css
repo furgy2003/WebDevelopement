@@ -1,0 +1,25 @@
+.nav_header {
+    background-color: rgb(57, 57, 57);
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_header a { 
+    color: aquamarine;
+    text-decoration: none;
+}
+
+.logo {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+.browse {
+    margin-right: 2rem;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+

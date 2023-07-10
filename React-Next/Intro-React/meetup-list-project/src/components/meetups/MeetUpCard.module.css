@@ -1,0 +1,22 @@
+.card_list {
+    list-style: none;
+    text-align: center;
+}
+
+.card_list img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.card_list button {
+    background-color: rgb(216, 37, 37);
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    border: 0;
+}
+
+.card_list button:hover {
+    background-color: rgb(142, 0, 0);
+}
