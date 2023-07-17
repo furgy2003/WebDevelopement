@@ -1,8 +1,17 @@
 import Link from "next/link";
+import { signOut, useSession } from "next-auth/react";
 
 import classes from "./main-navigation.module.css";
+import { Fragment } from "react";
 
 function MainNavigation() {
+  const { data: session, status } = useSession();
+  const isLoading = status === "loading";
+
+  function signOutHandler() {
+    signOut();
+  }
+
   return (
     <header className={classes.header}>
       <Link href="/">
@@ -10,15 +19,22 @@ function MainNavigation() {
       </Link>
       <nav>
         <ul>
-          <li>
-            <Link href="/auth">Login</Link>
-          </li>
-          <li>
-            <Link href="/profile">Profile</Link>
-          </li>
-          <li>
-            <button>Logout</button>
-          </li>
+          {!session && !isLoading && (
+            <li>
+              <Link href="/auth">Login</Link>
+            </li>
+          )}
+
+          {session && (
+            <Fragment>
+              <li>
+                <Link href="/profile">Profile</Link>
+              </li>
+              <li>
+                <button onClick={signOutHandler}>Logout</button>
+              </li>
+            </Fragment>
+          )}
         </ul>
       </nav>
     </header>
