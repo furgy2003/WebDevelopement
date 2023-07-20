@@ -1,0 +1,31 @@
+.input {
+    display: grid;
+    margin-top: 20px;
+
+}
+
+.input label {
+    margin-bottom: 5px;
+}
+
+.input input, .input textarea {
+    outline: none !important;
+    border-radius: 2px;
+    border-width: 0.5px;
+    border-style:solid;
+    border-color: rgb(181, 181, 181);
+}
+
+.input input:focus, .input textarea:focus {
+    outline: none !important;
+    border-color: var(--action_green);
+    box-shadow: 0 0 5px var(--action_green);
+}
+
+.input input {
+    height: 2rem;
+}
+
+.input textarea {
+    resize: none;
+}

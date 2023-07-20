@@ -1,0 +1,8 @@
+.btn {
+    border-radius: 10px;
+    width: 15rem;
+    height: 3rem;
+    color: white;
+    border-width: 0px;
+    background-color: var(--d_green);
+}
