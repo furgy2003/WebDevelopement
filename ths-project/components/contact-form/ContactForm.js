@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Row } from "antd";
 import TextInput from "./TextInput";
-import ActionButton from "../button/ActionButton";
+import ActionButton from "../ui/button/ActionButton";
+import classes from "./ContactForm.module.css";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -78,8 +79,10 @@ export default function ContactForm() {
             }}
           />
         </Row>
-        <Row justify="center">
-          <ActionButton onSubmit={submitHandler}>Submit</ActionButton>
+        <Row justify="center" className={classes.btn}>
+          <ActionButton onSubmit={submitHandler}>
+            <h3>Submit</h3>
+          </ActionButton>
         </Row>
       </form>
     </section>
