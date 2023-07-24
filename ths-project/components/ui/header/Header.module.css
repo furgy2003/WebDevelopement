@@ -1,7 +1,6 @@
 .header {
     background-color: var(--ddd_green);
     color: white;
-    margin: 0px;
     height: 10rem;
     vertical-align: middle;
     display: flex;

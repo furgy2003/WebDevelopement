@@ -2,6 +2,7 @@ import Logo from "./Logo";
 import { Menu } from "antd";
 import { useState } from "react";
 import Link from "next/link";
+import classes from "./MainNavigation.module.css";
 
 export default function MainNavigation() {
   const items = [
@@ -37,6 +38,7 @@ export default function MainNavigation() {
       selectedKeys={[current]}
       mode="horizontal"
       items={items}
+      className={classes.nav}
     />
   );
 }

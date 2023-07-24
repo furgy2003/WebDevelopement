@@ -1,0 +1,11 @@
+.link {
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    border-radius: 50%;
+    box-shadow: 0 0 5px var(--action_green);
+
+    display: flex;
+    align-items: center;
+}
+

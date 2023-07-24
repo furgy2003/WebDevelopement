@@ -1,0 +1,20 @@
+.section {
+    margin-top: 8rem;
+}
+
+.footer {
+    background-color: var(--dd_green);
+    color: white;
+    height: 18rem;
+    padding-top: 2.5rem;
+}
+
+.copyright {
+    background-color: var(--d_green);
+    color: white;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
