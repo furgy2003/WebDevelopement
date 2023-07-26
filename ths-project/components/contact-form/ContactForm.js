@@ -2,7 +2,13 @@ import { useState } from "react";
 import { Row } from "antd";
 import TextInput from "./TextInput";
 import ActionButton from "../ui/button/ActionButton";
-import classes from "./ContactForm.module.css";
+import { styled } from "styled-components";
+
+const Form = styled.form`
+  .btn {
+    margin-top: 20px;
+  }
+`;
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -27,7 +33,7 @@ export default function ContactForm() {
   return (
     <section>
       <h1>Contact Form</h1>
-      <form onSubmit={submitHandler}>
+      <Form onSubmit={submitHandler}>
         <Row justify="center" gutter={32}>
           <TextInput
             id="name"
@@ -79,12 +85,12 @@ export default function ContactForm() {
             }}
           />
         </Row>
-        <Row justify="center" className={classes.btn}>
+        <Row justify="center" className="btn">
           <ActionButton onSubmit={submitHandler}>
             <h3>Submit</h3>
           </ActionButton>
         </Row>
-      </form>
+      </Form>
     </section>
   );
 }

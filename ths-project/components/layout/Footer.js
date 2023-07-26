@@ -1,10 +1,32 @@
 import { Row, Col } from "antd";
-import classes from "./Footer.module.css";
+import { styled } from "styled-components";
+
+const CustomSection = styled.section`
+  & {
+    margin-top: 8rem;
+  }
+
+  .footer {
+    background-color: var(--dd_green);
+    color: white;
+    height: 18rem;
+    padding-top: 2.5rem;
+  }
+
+  .copyright {
+    background-color: var(--d_green);
+    color: white;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`;
 
 export default function Footer() {
   return (
-    <section className={classes.section}>
-      <Row className={classes.footer} justify="center" gutter={32}>
+    <CustomSection>
+      <Row className="footer" justify="center" gutter={32}>
         <Col xs={24} sm={24} md={6} lg={6}>
           <p>Address</p>
           <p>
@@ -32,9 +54,9 @@ export default function Footer() {
           </p>
         </Col>
       </Row>
-      <div className={classes.copyright}>
+      <div className="copyright">
         <p>Copyright 2023. All rights reserved.</p>
       </div>
-    </section>
+    </CustomSection>
   );
 }

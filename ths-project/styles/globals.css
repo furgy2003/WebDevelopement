@@ -22,3 +22,7 @@ input, textarea {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
+
+textarea {
+    padding-top: 0.5rem;
+}

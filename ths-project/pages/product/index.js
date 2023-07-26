@@ -2,8 +2,8 @@ import { Fragment, useState } from "react";
 import Header from "@/components/ui/header/Header";
 import ProductGrid from "@/components/product/ProductGrid";
 import Wrapper from "@/components/ui/wrapper/Wrapper";
-import ProductSearch from "@/components/search-bar/ProductSearch";
-import ProductFilterDrawer from "@/components/search-bar/ProductFilterDrawer";
+import ProductSearch from "@/components/product-search-bar/ProductSearch";
+import ProductFilterDrawer from "@/components/product-search-bar/ProductFilterDrawer";
 
 const DUMMY_PRODUCTS = [
   {
@@ -12,6 +12,7 @@ const DUMMY_PRODUCTS = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur nibh laoreet tortor ullamcorper dictum.",
     image: "/img/ibeam.png",
+    category: "Galvanized steel",
   },
   {
     id: "sku2",
@@ -19,6 +20,7 @@ const DUMMY_PRODUCTS = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur nibh laoreet tortor ullamcorper dictum.",
     image: "/img/hbeam.jpeg",
+    category: "Stainless steels",
   },
   {
     id: "sku3",
@@ -26,6 +28,7 @@ const DUMMY_PRODUCTS = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur nibh laoreet tortor ullamcorper dictum.",
     image: "/img/ibeam.png",
+    category: "Galvanized steel",
   },
   {
     id: "sku4",
@@ -33,6 +36,7 @@ const DUMMY_PRODUCTS = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur nibh laoreet tortor ullamcorper dictum.",
     image: "/img/ibeam.png",
+    category: "Galvanized steel",
   },
 ];
 

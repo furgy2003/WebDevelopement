@@ -1,12 +1,18 @@
 import { Row, Col } from "antd";
 import ProductCard from "./ProductCard";
-import classes from "./ProductGrid.module.css";
+import { styled } from "styled-components";
+
+const CustomRow = styled(Row)`
+  & {
+    padding-top: 4rem;
+  }
+`;
 
 export default function ProductGrid(props) {
   const { products } = props;
 
   return (
-    <Row justify="center" gutter={[32, 32]} className={classes.row}>
+    <CustomRow justify="center" gutter={[32, 32]}>
       {products.map((product) => {
         return (
           <Col key={product.id}>
@@ -14,6 +20,6 @@ export default function ProductGrid(props) {
           </Col>
         );
       })}
-    </Row>
+    </CustomRow>
   );
 }

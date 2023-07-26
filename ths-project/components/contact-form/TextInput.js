@@ -1,13 +1,45 @@
 import { Col } from "antd";
-import classes from "./TextInput.module.css";
 import { Fragment } from "react";
+import { styled } from "styled-components";
+
+const CustomCol = styled(Col)`
+  display: grid;
+  margin-top: 20px;
+
+  label {
+    margin-bottom: 5px;
+  }
+
+  input,
+  textarea {
+    outline: none !important;
+    border-radius: 2px;
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: rgb(181, 181, 181);
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none !important;
+    border-color: var(--action_green);
+  }
+
+  input {
+    height: 2rem;
+  }
+
+  textarea {
+    resize: none;
+  }
+`;
 
 export default function TextInput(props) {
   const { id, label, value, required, isTextArea, onChange } = props;
   return (
     <Fragment>
       {isTextArea && (
-        <Col className={classes.input} xs={24} sm={24} md={24} lg={12}>
+        <CustomCol className="input" xs={24} sm={24} md={24} lg={12}>
           <label htmlFor={id}>{label}</label>
           <textarea
             id={id}
@@ -16,10 +48,10 @@ export default function TextInput(props) {
             value={value}
             onChange={onChange}
           />
-        </Col>
+        </CustomCol>
       )}
       {!isTextArea && (
-        <Col className={classes.input} xs={24} sm={24} md={12} lg={6}>
+        <CustomCol className="input" xs={24} sm={24} md={12} lg={6}>
           <label htmlFor={id}>{label}</label>
           <input
             id={id}
@@ -27,7 +59,7 @@ export default function TextInput(props) {
             value={value}
             onChange={onChange}
           />
-        </Col>
+        </CustomCol>
       )}
     </Fragment>
   );

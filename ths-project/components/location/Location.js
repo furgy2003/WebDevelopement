@@ -1,12 +1,12 @@
 import { Row, Col } from "antd";
-import Map from "./Map";
+import GoogleMap from "./GoogleMap";
 
 export default function Location() {
   return (
     <Row>
       <Col>Address</Col>
       <Col>
-        <Map />
+        <GoogleMap />
       </Col>
     </Row>
   );
