@@ -4,7 +4,12 @@ import Image from "next/image";
 export default function Logo() {
   return (
     <Link href="/">
-      <Image src="/logo.png" alt="ths-logo" width={50} height={50} />
+      <Image
+        src="/img/company/ths-logo.png"
+        alt="ths-logo"
+        width={50}
+        height={50}
+      />
     </Link>
   );
 }

@@ -1,9 +1,0 @@
-.nav {
-    overflow-y: hidden;
-    display: flex;
-    align-items: center;
-}
-
-.nav a:focus {
-    color: var(--action_green);
-}

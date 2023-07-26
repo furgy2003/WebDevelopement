@@ -1,5 +1,11 @@
-import classes from "./Wrapper.module.css";
+import { styled } from "styled-components";
+
+const CustomDiv = styled.div`
+  & {
+    margin: 4rem;
+  }
+`;
 
 export default function Wrapper(props) {
-  return <div className={classes.wrapper}>{props.children}</div>;
+  return <CustomDiv>{props.children}</CustomDiv>;
 }
