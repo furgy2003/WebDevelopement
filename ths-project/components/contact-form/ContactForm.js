@@ -1,8 +1,12 @@
+// react-next
 import { useState } from "react";
+import { styled } from "styled-components";
+
+// components
 import { Row } from "antd";
 import TextInput from "./TextInput";
 import ActionButton from "../ui/button/ActionButton";
-import { styled } from "styled-components";
+import ValidityAlert from "./ValidityAlert";
 
 const Form = styled.form`
   .btn {
@@ -16,6 +20,7 @@ export default function ContactForm() {
   const [tel, setTel] = useState("");
   const [company, setCompany] = useState("");
   const [question, setQuestion] = useState("");
+  const [alert, setAlert] = useState(null);
 
   function resetForm() {
     setName("");
@@ -25,8 +30,46 @@ export default function ContactForm() {
     setQuestion("");
   }
 
-  function submitHandler(event) {
+  async function submitHandler(event) {
     event.preventDefault();
+    setAlert(null);
+    const customer = {
+      name,
+      email,
+      tel,
+      company,
+      question,
+    };
+
+    if (
+      !name ||
+      name.trim() === "" ||
+      !email ||
+      !email.includes("@") ||
+      !tel ||
+      !/^\d+$/.test(tel)
+    ) {
+      setAlert("invalid");
+      return;
+    }
+
+    const response = await fetch("/api/contact-form", {
+      method: "POST",
+      body: JSON.stringify(customer),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    const data = await response.json();
+    console.log(data);
+
+    if (!response.ok) {
+      setAlert("error");
+      return;
+    }
+
+    setAlert("success");
     resetForm();
   }
 
@@ -85,6 +128,7 @@ export default function ContactForm() {
             }}
           />
         </Row>
+        {alert && <ValidityAlert status={alert} />}
         <Row justify="center" className="btn">
           <ActionButton onSubmit={submitHandler}>
             <h3>Submit</h3>

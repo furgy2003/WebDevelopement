@@ -1,6 +1,12 @@
+// react-next
+import { styled } from "styled-components";
+
+// components
 import { Row, Col } from "antd";
 import ProductCard from "./ProductCard";
-import { styled } from "styled-components";
+
+// helpers
+import { getAllProducts } from "@/lib/helpers/product";
 
 const CustomRow = styled(Row)`
   & {
@@ -8,15 +14,14 @@ const CustomRow = styled(Row)`
   }
 `;
 
-export default function ProductGrid(props) {
-  const { products } = props;
-
+export default function ProductGrid() {
+  const products = getAllProducts();
   return (
-    <CustomRow justify="center" gutter={[32, 32]}>
-      {products.map((product) => {
+    <CustomRow gutter={[32, 32]}>
+      {products.map((item) => {
         return (
-          <Col key={product.id}>
-            <ProductCard product={product} />
+          <Col key={item.id}>
+            <ProductCard product={item} />
           </Col>
         );
       })}

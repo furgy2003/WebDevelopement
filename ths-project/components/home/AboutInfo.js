@@ -1,17 +1,9 @@
 import { Row, Col } from "antd";
 import Image from "next/image";
-import { styled } from "styled-components";
-
-const CustomRow = styled(Row)`
-  & {
-    display: flex;
-    justify-content: center;
-  }
-`;
 
 export default function AboutInfo() {
   return (
-    <Row justify="center" align="middle" gutter={64}>
+    <Row justify="center" align="middle" gutter={[64, 32]}>
       <Col xs={24} sm={24} md={12} lg={9}>
         <h1>About Us</h1>
         <p>
