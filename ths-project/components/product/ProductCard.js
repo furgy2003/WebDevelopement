@@ -6,19 +6,19 @@ import { styled } from "styled-components";
 // components
 import { Card } from "antd";
 
+const CustomLink = styled(Link)`
+  & {
+    text-decoration: none;
+  }
+
+  .img {
+    width: 300;
+    height: auto;
+  }
+`;
+
 export default function ProductCard(props) {
   const { product } = props;
-
-  const CustomLink = styled(Link)`
-    & {
-      text-decoration: none;
-    }
-
-    .img {
-      width: 300;
-      height: auto;
-    }
-  `;
 
   return (
     <CustomLink href={"/product/" + product.id}>

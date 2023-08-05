@@ -13,8 +13,8 @@ const CustomRow = styled(Row)`
 export default function ValidityAlert(props) {
   const { status } = props;
   return (
-    <CustomRow justify="center" gutter={32}>
-      <Col xs={24} sm={24} md={24} lg={12}>
+    <CustomRow justify="center" gutter={48}>
+      <Col xs={24} sm={24} md={24} lg={24}>
         {status === "invalid" && (
           <Alert
             message="Invalid input"

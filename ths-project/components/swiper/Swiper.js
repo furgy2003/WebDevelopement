@@ -7,10 +7,20 @@ import { styled } from "styled-components";
 // antd icon
 import { LeftOutlined } from "@ant-design/icons";
 import { RightOutlined } from "@ant-design/icons";
+import { Row, Col } from "antd";
+
+const CustomRow = styled(Row)`
+  & {
+    overflow: visible !important;
+  }
+  .column {
+    overflow: visible !important;
+  }
+`;
 
 const CustomSlider = styled(Slider)`
   & {
-    overflow: visible;
+    overflow: visible !important;
   }
 
   .right {
@@ -92,5 +102,11 @@ export default function Swiper(props) {
     ],
   };
 
-  return <CustomSlider {...settings}>{props.children}</CustomSlider>;
+  return (
+    <CustomRow justify="center">
+      <Col className="column" xs={24} sm={24} md={24} lg={18}>
+        <CustomSlider {...settings}>{props.children}</CustomSlider>
+      </Col>
+    </CustomRow>
+  );
 }

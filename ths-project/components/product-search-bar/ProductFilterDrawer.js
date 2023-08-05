@@ -1,6 +1,9 @@
+// react-next
+import styled from "styled-components";
+
+// components
 import { Drawer } from "antd";
 import ProductFilterList from "./ProductFilterList";
-import styled from "styled-components";
 
 const CustomDrawer = styled(Drawer)`
   .ant-drawer-header {

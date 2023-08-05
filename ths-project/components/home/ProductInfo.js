@@ -5,7 +5,7 @@ import { styled } from "styled-components";
 import ProductSwiper from "../product-swiper/product-info/ProductSwiper";
 
 // helpers
-import { getAllProducts } from "@/lib/helpers/product";
+import { getAllProducts } from "@/lib/helpers/product-util";
 
 const CustomDiv = styled.div`
   & {

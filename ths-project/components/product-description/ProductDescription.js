@@ -19,7 +19,7 @@ export default function ProductDescription(props) {
   const { product } = props;
   return (
     <CustomRow justify="center" gutter={[12, 12]}>
-      <Col xs={24} sm={24} md={24} lg={10}>
+      <Col xs={24} sm={24} md={12} lg={9}>
         <Image
           src={product.image}
           alt={product.name}
@@ -27,7 +27,7 @@ export default function ProductDescription(props) {
           height={400}
         />
       </Col>
-      <Col className="description" xs={24} sm={24} md={24} lg={10}>
+      <Col className="description" xs={24} sm={24} md={12} lg={9}>
         <h1>{product.name}</h1>
         <p>{product.description}</p>
       </Col>

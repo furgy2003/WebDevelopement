@@ -8,9 +8,14 @@ import Header from "@/components/ui/header/Header";
 import ProductDescription from "@/components/product-description/ProductDescription";
 import Wrapper from "@/components/ui/wrapper/Wrapper";
 import ProductSwiper from "@/components/product-swiper/product-info/ProductSwiper";
+import ProductNotFound from "@/components/product-description/ProductNotFound";
+import ProductTab from "@/components/product-description/ProductTab";
 
 // helpers
-import { getFeaturedProducts, getProductById } from "@/lib/helpers/product";
+import {
+  getFeaturedProducts,
+  getProductById,
+} from "@/lib/helpers/product-util";
 
 export default function SpecificProduct() {
   const router = useRouter();
@@ -24,12 +29,17 @@ export default function SpecificProduct() {
         <title>Products</title>
         <meta name="description" content="information about products" />
       </Head>
-      {!product && <p>Product not Found!</p>}
+      {!product && (
+        <Fragment>
+          <ProductNotFound />
+        </Fragment>
+      )}
       {product && (
         <Fragment>
           <Header>{product.name}</Header>
           <Wrapper>
             <ProductDescription product={product} />
+            <ProductTab />
             <ProductSwiper products={featuredProducts} />
           </Wrapper>
         </Fragment>

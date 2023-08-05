@@ -26,7 +26,7 @@ const CustomCol = styled(Col)`
   }
 
   input {
-    height: 2rem;
+    height: 2.5rem;
   }
 
   textarea {
@@ -39,7 +39,7 @@ export default function TextInput(props) {
   return (
     <Fragment>
       {isTextArea && (
-        <CustomCol className="input" xs={24} sm={24} md={24} lg={12}>
+        <CustomCol className="input" xs={24} sm={24} md={24} lg={24}>
           <label htmlFor={id}>{label}</label>
           <textarea
             id={id}
@@ -51,7 +51,7 @@ export default function TextInput(props) {
         </CustomCol>
       )}
       {!isTextArea && (
-        <CustomCol className="input" xs={24} sm={24} md={12} lg={6}>
+        <CustomCol className="input" xs={24} sm={24} md={12} lg={12}>
           <label htmlFor={id}>{label}</label>
           <input
             id={id}

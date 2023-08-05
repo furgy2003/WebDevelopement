@@ -1,4 +1,8 @@
+// react-next
 import { styled } from "styled-components";
+import { useState } from "react";
+
+// components
 import { SearchOutlined, FilterOutlined } from "@ant-design/icons";
 
 const CustomDiv = styled.div`
@@ -46,6 +50,7 @@ const CustomDiv = styled.div`
 `;
 
 export default function ProductSearch(props) {
+  const [searchInput, setSearchInput] = useState(""); // UPDATE
   return (
     <CustomDiv>
       <button className="filter_btn" onClick={props.filterHandler}>
