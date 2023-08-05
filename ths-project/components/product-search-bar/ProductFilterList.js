@@ -1,6 +1,9 @@
-import { Checkbox } from "antd";
+// react-next
 import { useState } from "react";
 import { styled } from "styled-components";
+
+// components
+import { Checkbox } from "antd";
 
 const CustomDiv = styled.div`
   & {

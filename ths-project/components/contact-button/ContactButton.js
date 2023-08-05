@@ -5,7 +5,7 @@ const CustomAnchor = styled.a`
   & {
     position: fixed;
     bottom: 4rem;
-    right: 4rem;
+    right: 3rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
