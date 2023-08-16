@@ -1,6 +1,6 @@
+// components
 import { Row, Col } from "antd";
 import Image from "next/image";
-import GoogleMap from "./GoogleMap";
 
 export default function Location() {
   return (

@@ -20,16 +20,6 @@ const CustomDiv = styled.div`
     overflow: hidden;
   }
 
-  .ant-checkbox-checked .ant-checkbox-inner {
-    background-color: var(--action_green) !important;
-    border-color: var(--action_green) !important;
-  }
-
-  .ant-checkbox-wrapper:hover .ant-checkbox-inner,
-  .ant-checkbox:hover .ant-checkbox-inner {
-    border-color: var(--action_green) !important;
-  }
-
   .ant-checkbox-group {
     display: grid;
   }

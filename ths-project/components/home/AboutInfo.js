@@ -1,3 +1,4 @@
+// components
 import { Row, Col } from "antd";
 import Image from "next/image";
 
