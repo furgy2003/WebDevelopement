@@ -1,4 +1,7 @@
+// react-next
 import Link from "next/link";
+
+// components
 import Image from "next/image";
 
 export default function Logo() {

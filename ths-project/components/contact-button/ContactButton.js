@@ -1,5 +1,8 @@
-import Image from "next/image";
+// react-next
 import { styled } from "styled-components";
+
+// components
+import Image from "next/image";
 
 const CustomAnchor = styled.a`
   & {

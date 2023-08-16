@@ -1,6 +1,9 @@
+// react-next
+import { styled } from "styled-components";
+
+// components
 import { Col } from "antd";
 import { Fragment } from "react";
-import { styled } from "styled-components";
 
 const CustomCol = styled(Col)`
   display: grid;

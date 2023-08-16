@@ -1,9 +1,9 @@
 // react-next
-import Image from "next/image";
 import { styled } from "styled-components";
 
 // components
 import { Col, Row } from "antd";
+import Image from "next/image";
 
 const CustomRow = styled(Row)`
   .description {
